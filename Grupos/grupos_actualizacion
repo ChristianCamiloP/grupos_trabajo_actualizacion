@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupos de Trabajo - Actualización Catastral</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 40px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        
+        .team-card {
+            background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+        }
+        
+        .coordinator-section {
+            margin-bottom: 20px;
+        }
+        
+        .role-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #a0aec0;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .coordinator-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-radius: 10px;
+        }
+        
+        .coordinator-name::before {
+            content: '👔';
+            font-size: 24px;
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #cbd5e0 50%, transparent 100%);
+            margin: 20px 0;
+        }
+        
+        .editors-section {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .editor-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            margin-bottom: 10px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #48bb78;
+            transition: all 0.2s ease;
+        }
+        
+        .editor-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .editor-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(72, 187, 120, 0.2);
+        }
+        
+        .editor-item::before {
+            content: '🖥️';
+            font-size: 20px;
+        }
+        
+        .editor-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .coordinator-name {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GRUPOS DE TRABAJO</h1>
+        <div class="subtitle">ACTUALIZACIÓN CATASTRAL</div>
+        
+        <div class="team-grid">
+            <!-- Kevin Rodriguez -->
+            <div class="team-card">
+                <div class="coordinator-section">
+                    <div class="role-label">COORDINADOR</div>
+                    <div class="coordinator-name">Kevin Rodriguez</div>
+                </div>
+                <div class="divider"></div>
+                <div class="role-label">EDITORES SIG</div>
+                <div class="editors-section">
+                    <div class="editor-item">
+                        <div class="editor-name">Natalia Rojas Collazos</div>
+                    </div>
+                    <div class="editor-item">
+                        <div class="editor-name">Maleiris Carolina Negrete</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Natalia Mendez -->
+            <div class="team-card">
+                <div class="coordinator-section">
+                    <div class="role-label">COORDINADOR</div>
+                    <div class="coordinator-name">Natalia Mendez</div>
+                </div>
+                <div class="divider"></div>
+                <div class="role-label">EDITORES SIG</div>
+                <div class="editors-section">
+                    <div class="editor-item">
+                        <div class="editor-name">Paula Andrea Piña</div>
+                    </div>
+                    <div class="editor-item">
+                        <div class="editor-name">Jonathan Romero</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carlos Niño -->
+            <div class="team-card">
+                <div class="coordinator-section">
+                    <div class="role-label">COORDINADOR</div>
+                    <div class="coordinator-name">Carlos Niño</div>
+                </div>
+                <div class="divider"></div>
+                <div class="role-label">EDITOR SIG</div>
+                <div class="editors-section">
+                    <div class="editor-item">
+                        <div class="editor-name">Raul Varon</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Christian Pulido -->
+            <div class="team-card">
+                <div class="coordinator-section">
+                    <div class="role-label">COORDINADOR</div>
+                    <div class="coordinator-name">Christian Pulido</div>
+                </div>
+                <div class="divider"></div>
+                <div class="role-label">EDITOR SIG</div>
+                <div class="editors-section">
+                    <div class="editor-item">
+                        <div class="editor-name">Jose Ovalle</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ricardo Cruz -->
+            <div class="team-card">
+                <div class="coordinator-section">
+                    <div class="role-label">COORDINADOR</div>
+                    <div class="coordinator-name">Ricardo Cruz</div>
+                </div>
+                <div class="divider"></div>
+                <div class="role-label">EDITORES SIG</div>
+                <div class="editors-section">
+                    <div class="editor-item">
+                        <div class="editor-name">David Cuervo</div>
+                    </div>
+                    <div class="editor-item">
+                        <div class="editor-name">Miguel Lemes</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cristofer Gutierres -->
+            <div class="team-card">
+                <div class="coordinator-section">
+                    <div class="role-label">COORDINADOR</div>
+                    <div class="coordinator-name">Cristofer Gutierres</div>
+                </div>
+                <div class="divider"></div>
+                <div class="role-label">EDITORES SIG</div>
+                <div class="editors-section">
+                    <div class="editor-item">
+                        <div class="editor-name">Fernando Acevedo</div>
+                    </div>
+                    <div class="editor-item">
+                        <div class="editor-name">Nayibe Moreno</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Felipe Blandon -->
+            <div class="team-card">
+                <div class="coordinator-section">
+                    <div class="role-label">COORDINADOR</div>
+                    <div class="coordinator-name">Felipe Blandon</div>
+                </div>
+                <div class="divider"></div>
+                <div class="role-label">EDITORES SIG</div>
+                <div class="editors-section">
+                    <div class="editor-item">
+                        <div class="editor-name">Yeison Alexander Jimenez</div>
+                    </div>
+                    <div class="editor-item">
+                        <div class="editor-name">Juan Camilo Perdomo</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Daniel Castañeda -->
+            <div class="team-card">
+                <div class="coordinator-section">
+                    <div class="role-label">COORDINADOR</div>
+                    <div class="coordinator-name">Daniel Castañeda</div>
+                </div>
+                <div class="divider"></div>
+                <div class="role-label">EDITORES SIG</div>
+                <div class="editors-section">
+                    <div class="editor-item">
+                        <div class="editor-name">Christian Calvache</div>
+                    </div>
+                    <div class="editor-item">
+                        <div class="editor-name">Juan Pinillos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
